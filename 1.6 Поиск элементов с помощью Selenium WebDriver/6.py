@@ -20,19 +20,19 @@ try:
 
     input1 = browser.find_element(
         By.CSS_SELECTOR,
-        "[placeholder='Input your first name']"
+        "[required].first"
     )
     input1.send_keys("Ivan")
 
     input2 = browser.find_element(
         By.CSS_SELECTOR,
-        "[placeholder='Input your last name']"
+        "[required].second"
     )
     input2.send_keys("Petrov")
 
     input3 = browser.find_element(
         By.CSS_SELECTOR,
-        "[placeholder='Input your email']"
+        "[required].third"
     )
     input3.send_keys("smolensk@mail.ru")
 
