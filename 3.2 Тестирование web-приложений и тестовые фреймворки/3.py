@@ -23,7 +23,6 @@ try/except, здесь нужно запустить тест без неё. Л�
 даже при наличии неожиданного исключения.
 """
 import unittest
-import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
