@@ -26,12 +26,13 @@ import unittest
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class TestRegistration(unittest.TestCase):
     def setUp(self):
         self.browser = webdriver.Chrome()
-        self.browser.implicitly_wait(5)
 
     def tearDown(self):
         self.browser.quit()
@@ -56,7 +57,9 @@ class TestRegistration(unittest.TestCase):
 
         self.browser.find_element(By.CSS_SELECTOR, "button.btn").click()
 
-        welcome_text = self.browser.find_element(By.TAG_NAME, "h1").text
+        welcome_text = WebDriverWait(self.browser, 5).until(
+            EC.visibility_of_element_located((By.TAG_NAME, "h1"))
+        ).text
 
         self.assertEqual(
             "Congratulations! You have successfully registered!",
@@ -84,7 +87,9 @@ class TestRegistration(unittest.TestCase):
 
         self.browser.find_element(By.CSS_SELECTOR, "button.btn").click()
 
-        welcome_text = self.browser.find_element(By.TAG_NAME, "h1").text
+        welcome_text = WebDriverWait(self.browser, 5).until(
+            EC.visibility_of_element_located((By.TAG_NAME, "h1"))
+        ).text
 
         self.assertEqual(
             "Congratulations! You have successfully registered!",
