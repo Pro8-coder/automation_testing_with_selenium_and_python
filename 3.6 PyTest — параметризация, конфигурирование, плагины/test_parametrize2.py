@@ -97,9 +97,11 @@ class TestParametrize:
             )).click()
 
         answer = math.log(int(time.time() + 2.0))
-        WebDriverWait(browser, 15).until(EC.element_to_be_clickable(
+        text_area = WebDriverWait(browser, 15).until(EC.element_to_be_clickable(
             (By.CSS_SELECTOR, ".ember-text-area")
-        )).send_keys(answer)
+        ))
+        text_area.clear()
+        text_area.send_keys(answer)
 
         WebDriverWait(browser, 15).until(EC.element_to_be_clickable(
             (By.CSS_SELECTOR, "button.submit-submission")
