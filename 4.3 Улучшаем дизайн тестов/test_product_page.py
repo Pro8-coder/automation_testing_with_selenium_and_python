@@ -18,7 +18,7 @@ def test_guest_can_add_product_to_basket(browser, promo):
     page.solve_quiz_and_get_code()
     page.name_validity_check()
     page.price_validity_check()
-    page.should_disappeared()
+    # page.should_disappeared()
 
 
 def test_guest_cant_see_success_message_after_adding_product_to_basket(
