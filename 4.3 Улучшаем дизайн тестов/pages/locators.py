@@ -14,6 +14,10 @@ class ProductPageLocators:
     BUTTON_ADD_TO_BASKET = (By.CSS_SELECTOR, 'button.btn-add-to-basket')
     NAME_PRODUCT = (By.CSS_SELECTOR, '.product_main h1')
     PRICE_PRODUCT = (By.CSS_SELECTOR, '.product_main .price_color')
+    SUCCESS_MESSAGE = (
+        By.CSS_SELECTOR,
+        '//div[contains(@class, "alertinner") and contains(., "был добавлен в вашу корзину")]'
+    )
     MESSAGE_NAME_PRODUCT = (By.CSS_SELECTOR,
                             '#messages > :nth-child(1) strong')
     MESSAGE_PRICE_PRODUCT = (By.CSS_SELECTOR,

@@ -13,7 +13,9 @@ def test_guest_can_add_product_to_basket(browser, promo):
         f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo={promo}"
     )
     page.open()
+    page.should_not_be_success_message()
     page.add_to_basket()
     page.solve_quiz_and_get_code()
     page.name_validity_check()
     page.price_validity_check()
+    page.is_disappeared()
