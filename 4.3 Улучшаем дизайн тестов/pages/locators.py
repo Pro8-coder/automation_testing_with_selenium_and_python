@@ -19,3 +19,8 @@ class ProductPageLocators:
     MESSAGE_PRICE_PRODUCT = (By.CSS_SELECTOR,
                              '#messages > :nth-child(3) strong')
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, 'div[id="messages"] div')
+
+
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
