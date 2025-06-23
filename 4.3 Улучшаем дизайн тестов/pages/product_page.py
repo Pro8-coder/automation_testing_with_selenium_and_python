@@ -15,8 +15,8 @@ class ProductPage(BasePage):
         message_name = self.browser.find_element(
             *ProductPageLocators.MESSAGE_NAME_PRODUCT
         ).text
-        assert (name == message_name,
-                f"Не совпадает имя товара: {name} и {message_name}")
+        assert name == message_name, \
+            f"Не совпадает имя товара: {name} и {message_name}"
 
     def price_validity_check(self):
         price = self.browser.find_element(
@@ -25,8 +25,8 @@ class ProductPage(BasePage):
         message_price = self.browser.find_element(
             *ProductPageLocators.MESSAGE_PRICE_PRODUCT
         ).text
-        assert (price == message_price,
-                f"Не совпадает цена товара: {price} и {message_price}")
+        assert price == message_price, \
+            f"Не совпадает цена товара: {price} и {message_price}"
 
     def should_not_be_success_message(self):
         assert self.is_not_element_present(
