@@ -18,7 +18,7 @@ class ProductPageLocators:
                             '#messages > :nth-child(1) strong')
     MESSAGE_PRICE_PRODUCT = (By.CSS_SELECTOR,
                              '#messages > :nth-child(3) strong')
-    SUCCESS_MESSAGE = (By.CSS_SELECTOR, 'div[id="messages"] div')
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, 'div[id="messages"] div:first-child')
 
 
 class BasePageLocators:
