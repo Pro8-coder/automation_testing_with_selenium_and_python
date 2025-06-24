@@ -33,5 +33,5 @@ class BasePageLocators:
 
 class BasketPageLocators:
     """Селекторы для BasketPage"""
-    PRODUCT_IN_BASKET = (By.CSS_SELECTOR, 'div[id="content_inner"] div')
+    PRODUCT_IN_BASKET = (By.CSS_SELECTOR, 'div[class="basket-items"]')
     MESSAGE_IN_BASKET = (By.CSS_SELECTOR, 'div[id="content_inner"] p')
