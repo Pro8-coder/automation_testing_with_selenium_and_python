@@ -34,8 +34,9 @@ class BasePage:
         ), "Login link is not presented"
 
     def go_to_basket_page(self):
-        link = self.browser.find_element(*BasePageLocators.BASKET_LINK)
-        link.click()
+        WebDriverWait(self.browser, 10).until(
+            EC.element_to_be_clickable(BasePageLocators.BASKET_LINK)
+        ).click()
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
